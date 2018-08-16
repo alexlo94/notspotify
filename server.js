@@ -11,7 +11,7 @@ app.use(express.static('static'));
 app.use(urlencodedParser); 
 app.set('view engine', 'ejs');
 
-var db = mongojs("testuser:testuser1@ds161041.mlab.com:61041/mongolotsos", ["notspotify"]);
+var db = "YOURMONGODBINFOHERE"
 var path = 'static/music';
 var currfiles = [];
 
