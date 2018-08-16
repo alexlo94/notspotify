@@ -102,7 +102,7 @@ function setup() {
 
 
   //collect data from the server
-  var songlist = httpGet('http://159.203.170.193:6969/data', 'json', function(data){
+  var songlist = httpGet('http://159.203.170.193:8083/data', 'json', function(data){
     songlist = data;
 
     //once data has been collected from the server, create the two main sections of the page
@@ -132,7 +132,7 @@ function setup() {
         }
         songname = data[this.value()].filename;
         nowplaying.html("Now Playing: " + songname);
-        song = loadSound("http:\/\/159.203.170.193:6969\/music\/" + songname, soundLoaded);
+        song = loadSound("http:\/\/159.203.170.193:8083\/music\/" + songname, soundLoaded);
       });
     }
 
@@ -191,7 +191,7 @@ function draw() {
     text("Loading...", width/2, height/2);
     textSize(24);
     text("Use the escape key to pause/play once the song has started.", width/2, (3*height)/4);
-    //song = loadSound("http:\/\/159.203.170.193:6969\/music\/" + songname, soundLoaded);
+    //song = loadSound("http:\/\/159.203.170.193:8083\/music\/" + songname, soundLoaded);
   }
   else if (!loading && !pause && (song != null) && (volume != null) && (fft != null)){
     tones = [];
@@ -286,7 +286,7 @@ function refreshEvent(){
     listContainer.removeChild(listContainer.firstChild);
   }
 
-  var songlist = httpGet('http://159.203.170.193:6969/data', 'json', function(data){
+  var songlist = httpGet('http://159.203.170.193:8083/data', 'json', function(data){
     songlist = data;
     for(var i = 0; i < data.length; i++){
       //append the data piece to the songlist
@@ -313,7 +313,7 @@ function refreshEvent(){
         }
         songname = data[this.value()].filename;
         nowplaying.html("Now Playing: " + songname);
-        song = loadSound("http:\/\/159.203.170.193:6969\/music\/" + songname, soundLoaded);
+        song = loadSound("http:\/\/159.203.170.193:8083\/music\/" + songname, soundLoaded);
       });
     }
   });
