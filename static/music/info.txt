@@ -1,0 +1,5 @@
+#Directory where music files go on server side implementation
+<br>
+I've obviously left jackhammer.mp3 here because I have a great taste in music.
+<br>
+As people upload music to the app this directory will get populated with mp3 files.
