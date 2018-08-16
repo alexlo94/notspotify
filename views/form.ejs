@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Song Submission</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+	<div id = "header" class = "wrapper">
+		<h1> Submit Your Song</h1>
+	</div>
+	<div id = "body" class = "wrapper">
+		<form method = "post" action = "/fileupload" enctype="multipart/form-data">
+			<input type = "file" name = "filetoupload">
+			<input id = "filesubmit" type = "submit" value = "Upload">
+		</form>
+	</div>
+	<div id = "footer" class = "wrapper">
+		<form id = "home" class = "footcontrol" method = "get" action = "/">
+			<input type = "submit" value = "Home">
+		</form>
+		<form id = "submit" class = "footcontrol" method = "get" action = "/submit">
+			<input type = "submit" value = "Submit">
+		</form>
+		<form id = "refresh" class = "footcontrol" method="get" action = "/refresh">
+			<input type = "submit" value = "Refresh">
+		</form>
+	</div>
+</body>
+</html>

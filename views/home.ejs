@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>NotSpotify</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+	<div id = "header" class = "wrapper">
+		<h1>What Have I Done</h1>
+	</div>
+	<div id = "body" class = "wrapper">
+		<ul>
+			<%for(var i = 0; i < songlist.length; i++){%>
+				<li class = "song"><%= songlist[i].title %>
+					<form class = "playbutton" method = "post" action = "/playsong">
+						<input type = "hidden" name = "songname" value = "<%= songlist[i].filename %>">
+						<input type = "submit" value = "Play!">
+					</form>
+				</li>
+			<%}%>
+		</ul>
+	</div>
+	<div id = "footer" class = "wrapper">
+		<form id = "home" class = "footcontrol" method = "get" action = "/">
+			<input type = "submit" value = "Home">
+		</form>
+		<form id = "submit" class = "footcontrol" method = "get" action = "/submit">
+			<input type = "submit" value = "Submit">
+		</form>
+		<form id = "refresh" class = "footcontrol" method="get" action = "/refresh">
+			<input type = "submit" value = "Refresh">
+		</form>
+	</div>
+</body>
+</html>
