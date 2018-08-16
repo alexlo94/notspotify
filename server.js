@@ -113,4 +113,4 @@ app.post('/playsong', function(req,res){
 	res.render("visualizer.ejs", {"songname": name});
 });
 
-app.listen(6969);
+app.listen(8083);
